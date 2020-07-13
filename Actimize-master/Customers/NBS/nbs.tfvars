@@ -1,0 +1,8 @@
+key_name = "Actimizekey"
+ami = "ami-0d8aee0fe327c6fb2"
+inst_type = "t2.micro"
+customer = "nbs"
+vpc_cidr = "10.0.0.0/26"
+public_subnet_cidr = "10.0.0.0/28"
+nameofinstance="nbs-server"
+vpc_name="nbs-vpc"
