@@ -1,0 +1,8 @@
+key_name = "Actimizekey"
+ami = "ami-0d8aee0fe327c6fb2"
+inst_type = "t2.micro"
+customer = "hsbc"
+vpc_cidr = "10.0.0.0/24"
+public_subnet_cidr = "10.0.0.192/26"
+nameofinstance="hsbc-server"
+vpc_name="hsbc-vpc"
