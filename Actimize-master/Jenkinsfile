@@ -3,8 +3,8 @@ agent any
 stages {
 stage('Provision infrastructure') {
  steps {
-   sh '/usr/Test-User/terraform init'
-   sh '/usr/Test-User/terraform plan -out=plan'
+   sh '/usr/Terra/terraform init'
+   sh '/usr/Terra/terraform plan -out=plan'
 
  }
 }
@@ -18,7 +18,7 @@ stage('Provision infrastructure') {
 stage('TF Apply') {
       steps {
         
-          sh '/usr/Test-User/terraform apply plan'
+          sh '/usr/Terra/terraform apply plan'
         
       }
     }
