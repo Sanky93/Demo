@@ -41,7 +41,7 @@ variable "vpc_name" {
 }
 
 variable "key_path" {
-  default = "actimize.pub"
+  default = "./Actimize-master/Customer/HSBC/actimize.pub"
 }
 
 # variable "Softwares_list"{
