@@ -19,7 +19,7 @@ stage('Provision infrastructure') {
 stage('TF Apply') {
       steps {
         
-          sh ' terraform apply --var-file=./Actimize-master/Customers/HSBC/hsbc.tfvars   ./Actimize-master/Customers/HSBC/'
+          sh ' /usr/local/bin/terraform apply plan   ./Actimize-master/Customers/HSBC/'
         
       }
     }
