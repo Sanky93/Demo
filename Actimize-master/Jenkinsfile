@@ -18,7 +18,7 @@ stage('Provision infrastructure') {
 stage('TF Apply') {
       steps {
         
-          sh './Actimize-master/Customers/HSBC ; terraform apply plan'
+          sh ' terraform apply plan  ./Actimize-master/Customers/HSBC'
         
       }
     }
