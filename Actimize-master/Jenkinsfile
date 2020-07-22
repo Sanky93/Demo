@@ -3,8 +3,8 @@ agent any
 stages {
 stage('Provision infrastructure') {
  steps {
-   sh 'terraform init --var-file=./Actimize-master/Customers/HSBC/hsbc.tfvars ./Actimize-master/Customers/HSBC'
-   sh 'terraform plan --var-file=./Actimize-master/Customers/HSBC/hsbc.tfvars -out=plan  ./Actimize-master/Customers/HSBC'
+   sh 'terraform init --var-file=./Actimize-master/Customers/HSBC/hsbc.tfvars ./Actimize-master/Customers/HSBC/'
+   sh 'terraform plan --var-file=./Actimize-master/Customers/HSBC/hsbc.tfvars -out=plan  ./Actimize-master/Customers/HSBC/'
 
  }
 }
@@ -18,7 +18,7 @@ stage('Provision infrastructure') {
 stage('TF Apply') {
       steps {
         
-          sh ' terraform apply --var-file=./Actimize-master/Customers/HSBC/hsbc.tfvars   ./Actimize-master/Customers/HSBC'
+          sh ' terraform apply --var-file=./Actimize-master/Customers/HSBC/hsbc.tfvars   ./Actimize-master/Customers/HSBC/'
         
       }
     }
