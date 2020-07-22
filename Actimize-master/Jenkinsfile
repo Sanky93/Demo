@@ -3,8 +3,9 @@ agent any
 stages {
 stage('Provision infrastructure') {
  steps {
-   sh './Actimize-master/Customers/HSBC/ ; terraform init'
-   sh './Actimize-master/Customers/HSBC/ ; terraform plan -out=plan'
+   sh './Actimize-master/Customers/HSBC/'
+   sh 'terraform init'
+   sh 'terraform plan -out=plan'
 
  }
 }
