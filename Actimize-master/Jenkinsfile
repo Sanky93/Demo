@@ -3,10 +3,6 @@ agent any
 stages {
 stage('Provision infrastructure') {
  steps {
-   environment {
-   AWS_ACCESS_KEY_ID = "${env.AWS_ACCESS_KEY_ID}"
-   AWS_SECRET_ACCESS_KEY = "${env.AWS_SECRET_ACCESS_KEY}"
-}
 
    sh 'terraform init --var-file=./Actimize-master/Customers/HSBC/hsbc.tfvars ./Actimize-master/Customers/HSBC/'
    sh 'terraform plan --var-file=./Actimize-master/Customers/HSBC/hsbc.tfvars -out=plan  ./Actimize-master/Customers/HSBC/'
