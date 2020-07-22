@@ -1,19 +1,10 @@
 pipeline {
 agent any
 stages {
-stage('Checkout project from github') {
-   steps {
-       sh '/usr/Terra/'
-       git branch: 'master',
-           url: 'ssh://git@github.com:JyotikaW/Demo.git'
-
-       sh "ls -lat"
-   }
-}
 stage('Provision infrastructure') {
  steps {
-   sh '/usr/Terra/Demo/Actimize-master/Customers/HSBC/terraform init'
-   sh '/usr/Terra/Demo/Actimize-master/Customers/HSBC/terraform plan -out=plan'
+   sh '/Demo-Setup-pipeline/Actimize-master/Customers/HSBC/ terraform init'
+   sh '/Demo-Setup-pipeline/Actimize-master/Customers/HSBC/ terraform plan -out=plan'
 
  }
 }
@@ -27,7 +18,7 @@ stage('Provision infrastructure') {
 stage('TF Apply') {
       steps {
         
-          sh '/usr/Terra/terraform apply plan'
+          sh 'Demo-Setup-pipeline/Actimize-master/Customers/HSBC/ terraform apply plan'
         
       }
     }
